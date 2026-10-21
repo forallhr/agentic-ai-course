@@ -1,0 +1,1186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>Agentic AI Course — $199 Full Access</title>
+    <meta name="description" content="Learn to design, build, and deploy AI agents that do real work. 8 modules, 40 lessons, videos, quizzes, worksheets, and a certificate of completion. $199 one-time, lifetime access." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #F7F5F0; --surface: #FFFFFF; --surface2: #EFECE4;
+        --text: #0F1A2E; --dim: #5B6472; --border: #E2DED2;
+        --accent: #D97706; --accent-text: #92400E; --accent-hover: #B45309;
+        --navy: #0F1A2E; --success: #15803D; --success-bg: #DCFCE7;
+        --danger: #B91C1C; --danger-bg: #FEE2E2;
+        --radius: 14px;
+        --font-sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+        --font-serif: "IBM Plex Serif", Georgia, serif;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          color-scheme: dark;
+          --bg: #0B1220; --surface: #131E33; --surface2: #1B2A45;
+          --text: #F1EFE8; --dim: #9AA5B5; --border: #2A3A57;
+          --accent: #F59E0B; --accent-text: #FBBF24; --accent-hover: #FBBF24;
+          --success-bg: #14532D; --danger-bg: #450A0A;
+        }
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      body { margin: 0; font-family: var(--font-sans); background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.5; }
+      h1, h2, h3 { line-height: 1.25; margin: 0; }
+      p { margin: 0; }
+      button { font-family: inherit; cursor: pointer; }
+      input, textarea { font-family: inherit; font-size: 16px; color: var(--text); }
+      a { color: var(--accent-text); }
+      .serif { font-family: var(--font-serif); }
+      .wrap { max-width: 1152px; margin: 0 auto; padding: 0 16px; }
+      .hidden { display: none !important; }
+
+      /* Buttons */
+      .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: none; border-radius: 999px; font-weight: 600; font-size: 16px; padding: 13px 26px; min-height: 48px; text-decoration: none; transition: background .15s ease, opacity .15s ease; }
+      .btn:disabled { opacity: .5; cursor: not-allowed; }
+      .btn-accent { background: var(--accent); color: #fff; }
+      .btn-accent:hover:not(:disabled) { background: var(--accent-hover); }
+      .btn-navy { background: var(--navy); color: #fff; }
+      @media (prefers-color-scheme: dark) { .btn-navy { background: var(--accent); color: #0B1220; } }
+      .btn-ghost { background: var(--surface); border: 1px solid var(--border); color: var(--text); font-weight: 500; }
+      .btn-ghost:hover { background: var(--surface2); }
+      .btn-white10 { background: rgba(255,255,255,.1); color: #fff; font-weight: 500; }
+      .btn-white10:hover { background: rgba(255,255,255,.2); }
+      .btn-sm { padding: 9px 20px; min-height: 44px; font-size: 15px; }
+
+      /* Cards */
+      .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+      .card-pad-lg { padding: 24px; }
+
+      /* Header (in-course) */
+      .app-header { background: var(--navy); color: #fff; position: sticky; top: 0; z-index: 20; padding-top: env(safe-area-inset-top); }
+      .app-header .row { display: flex; align-items: center; gap: 12px; padding-top: 12px; padding-bottom: 4px; }
+      .app-header .title { font-weight: 600; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .app-header .student { font-size: 12px; color: rgba(255,255,255,.7); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .app-header .right { margin-left: auto; display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+      .pct-pill { font-size: 12px; background: rgba(255,255,255,.1); border-radius: 999px; padding: 4px 10px; white-space: nowrap; }
+      .link-btn { background: none; border: none; color: rgba(255,255,255,.85); font-size: 12px; text-decoration: underline; padding: 8px 4px; min-height: 40px; }
+      .app-nav { display: flex; gap: 8px; padding-top: 8px; padding-bottom: 12px; overflow-x: auto; scrollbar-width: none; }
+      .app-nav::-webkit-scrollbar { display: none; }
+      .nav-btn { white-space: nowrap; border: none; border-radius: 999px; padding: 9px 16px; font-size: 14px; font-weight: 500; min-height: 40px; background: rgba(255,255,255,.1); color: #fff; }
+      .nav-btn:hover { background: rgba(255,255,255,.2); }
+      .nav-btn.active { background: var(--accent); color: #fff; }
+
+      main { padding: 24px 0 64px; }
+
+      /* Navy hero panels */
+      .navy-panel { background: var(--navy); color: #fff; border-radius: var(--radius); padding: 24px; }
+      @media (min-width: 640px) { .navy-panel { padding: 28px; } }
+      .progress-track { height: 12px; border-radius: 999px; background: rgba(255,255,255,.2); overflow: hidden; }
+      .progress-fill { height: 100%; background: var(--accent); border-radius: 999px; transition: width .4s ease; }
+
+      /* Module number badge */
+      .mod-badge { flex-shrink: 0; width: 36px; height: 36px; border-radius: 999px; display: grid; place-items: center; font-weight: 600; font-size: 14px; background: var(--accent); color: #fff; }
+      .mod-badge.done { background: var(--success); }
+      .mod-badge.locked { background: var(--surface2); color: var(--dim); }
+
+      .muted { color: var(--dim); }
+      .small { font-size: 14px; }
+      .xs { font-size: 12px; }
+      .stack > * + * { margin-top: 12px; }
+      .stack-lg > * + * { margin-top: 24px; }
+
+      /* Lesson list rows */
+      .lesson-list { list-style: none; margin: 12px 0 0; padding: 0; }
+      .lesson-list li + li { border-top: 1px solid var(--border); }
+      .lesson-row { width: 100%; text-align: left; background: none; border: none; padding: 11px 0; display: flex; align-items: center; gap: 12px; min-height: 44px; font-size: 16px; color: var(--text); }
+      button.lesson-row:hover { background: var(--surface2); }
+      .lesson-row.static { color: var(--dim); cursor: default; }
+      .lesson-row .flex1 { flex: 1; min-width: 0; }
+      .done-mark { color: var(--success); }
+      .todo-mark { color: var(--dim); }
+
+      /* Lesson reading */
+      .lesson-article { max-width: 768px; margin: 0 auto; }
+      .lesson-article .intro { font-size: 18px; color: var(--dim); line-height: 1.65; margin-top: 12px; }
+      .lesson-article section { margin-top: 32px; }
+      .lesson-article section h3 { font-size: 20px; font-weight: 600; }
+      .lesson-article section p { margin-top: 12px; line-height: 1.75; font-size: 17px; }
+      .lesson-article ul { margin: 12px 0 0; padding-left: 20px; line-height: 1.6; }
+      .lesson-article ul li + li { margin-top: 6px; }
+      .example-box { margin-top: 16px; background: var(--surface2); border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 16px; line-height: 1.65; }
+      .takeaways { margin-top: 40px; }
+      .worksheet { margin-top: 40px; border: 2px solid color-mix(in srgb, var(--accent) 50%, transparent); }
+      .field label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 6px; }
+      .field textarea, .field input[type="text"], .text-input {
+        width: 100%; border: 1px solid var(--border); border-radius: 10px; padding: 11px 14px;
+        background: var(--surface); color: var(--text); min-height: 48px;
+      }
+      .field textarea { line-height: 1.55; resize: vertical; }
+      .field + .field { margin-top: 16px; }
+      .saved-msg { color: var(--success); font-size: 14px; margin-top: 12px; }
+      .err-msg { color: var(--danger); font-size: 14px; margin-top: 8px; }
+      .complete-chip { display: inline-flex; align-items: center; gap: 8px; background: var(--success-bg); color: var(--success); font-weight: 600; border-radius: 999px; padding: 10px 16px; }
+
+      /* Video player */
+      .video-figure { margin: 24px 0 0; background: var(--navy); color: #fff; border-radius: var(--radius); overflow: hidden; }
+      .video-box { position: relative; aspect-ratio: 16 / 9; background: #000; }
+      .video-box video { width: 100%; height: 100%; object-fit: contain; background: #000; display: block; }
+      .video-play-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,.25); border: none; width: 100%; padding: 0; }
+      .video-play-btn { display: flex; width: 64px; height: 64px; align-items: center; justify-content: center; border-radius: 999px; background: var(--accent); color: #fff; box-shadow: 0 10px 25px rgba(0,0,0,.35); }
+      .video-caption { padding: 12px 16px; background: rgba(0,0,0,.2); display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; }
+      .video-caption .vt { font-size: 14px; font-weight: 500; color: #fff; }
+      .video-caption .vs { font-size: 12px; color: rgba(255,255,255,.6); }
+
+      /* Quiz */
+      .quiz-q { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin: 0; }
+      .quiz-q legend { font-weight: 500; padding: 0 4px; font-size: 16px; }
+      .quiz-opts { margin-top: 12px; display: grid; gap: 8px; }
+      .quiz-opt { display: flex; align-items: flex-start; gap: 12px; border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; cursor: pointer; min-height: 48px; line-height: 1.45; }
+      .quiz-opt:hover { background: var(--surface2); }
+      .quiz-opt.sel { border-color: var(--accent); background: var(--surface2); }
+      .quiz-opt input { margin-top: 3px; width: 16px; height: 16px; flex-shrink: 0; accent-color: var(--accent); }
+      .quiz-result { border-radius: var(--radius); padding: 24px; text-align: center; }
+      .quiz-result.pass { background: var(--success-bg); }
+      .quiz-result.fail { background: var(--danger-bg); }
+      .quiz-result .score { font-size: 48px; font-weight: 700; line-height: 1; }
+
+      /* Certificates */
+      .cert-grid { display: grid; gap: 12px; }
+      @media (min-width: 640px) { .cert-grid { grid-template-columns: 1fr 1fr; } }
+      #certificate-print {
+        background: #FFFFFF; color: #0F1A2E; border: 4px double #D97706; border-radius: var(--radius);
+        box-shadow: 0 10px 30px rgba(15,26,46,.18); padding: 32px; text-align: center;
+      }
+      @media (min-width: 640px) { #certificate-print { padding: 48px; } }
+      #certificate-print .cert-kicker { letter-spacing: .3em; font-size: 12px; font-weight: 600; color: #92400E; }
+      #certificate-print .cert-course { font-family: var(--font-serif); font-size: 30px; margin-top: 24px; }
+      #certificate-print .cert-sub { font-size: 14px; color: #5B6472; margin-top: 4px; }
+      #certificate-print .cert-name { font-family: var(--font-serif); font-size: 40px; line-height: 1.2; margin-top: 8px; border-bottom: 1px solid #E2DED2; padding-bottom: 16px; }
+      @media (min-width: 640px) { #certificate-print .cert-name { font-size: 48px; } }
+      #certificate-print .cert-body { margin-top: 20px; line-height: 1.65; max-width: 576px; margin-left: auto; margin-right: auto; }
+      #certificate-print .cert-meta { margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; text-align: left; font-size: 14px; max-width: 576px; margin-left: auto; margin-right: auto; }
+      #certificate-print .cert-meta .k { color: #5B6472; }
+      #certificate-print .cert-meta .v { font-weight: 600; margin-top: 2px; }
+      #certificate-print .cert-meta .v.mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+      #certificate-print .cert-seal { margin: 40px auto 0; width: 56px; height: 56px; border-radius: 999px; background: #0F1A2E; color: #fff; display: grid; place-items: center; font-size: 20px; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+      /* Enroll page */
+      .hero { background: var(--navy); color: #fff; padding-top: env(safe-area-inset-top); }
+      .hero-inner { padding: 40px 0 48px; }
+      @media (min-width: 640px) { .hero-inner { padding: 56px 0; } }
+      .hero .kicker { color: var(--accent); font-weight: 600; font-size: 14px; letter-spacing: .04em; }
+      @media (prefers-color-scheme: dark) { .hero .kicker { color: #FBBF24; } }
+      .hero h1 { font-family: var(--font-serif); font-size: 36px; margin-top: 12px; line-height: 1.15; }
+      @media (min-width: 640px) { .hero h1 { font-size: 48px; } }
+      .hero .lede { margin-top: 16px; font-size: 18px; color: rgba(255,255,255,.85); max-width: 672px; line-height: 1.6; }
+      .price-row { margin-top: 24px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; }
+      .price-row .price { font-size: 36px; font-weight: 700; }
+      .price-row .terms { color: rgba(255,255,255,.85); }
+      .pay-row { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px; }
+      .pay-col { margin-top: 24px; display: grid; gap: 12px; max-width: 440px; }
+      .btn-paypal { background: #0079C1; color: #fff; }
+      .btn-paypal:hover { background: #005EA6; }
+      .hero-code { margin-top: 20px; max-width: 440px; }
+      .hero-code .err-msg { color: #FCA5A5; }
+      .pay-note { margin-top: 10px; font-size: 12px; color: rgba(255,255,255,.6); max-width: 560px; line-height: 1.6; }
+
+      .enroll-grid { display: grid; gap: 32px; padding: 32px 0 64px; }
+      @media (min-width: 1024px) { .enroll-grid { grid-template-columns: 1fr 380px; } }
+      .enroll-side { height: fit-content; }
+      @media (min-width: 1024px) { .enroll-side { position: sticky; top: 24px; } }
+      .include-list { margin: 8px 0 0; padding-left: 20px; font-size: 15px; line-height: 1.6; }
+      .include-list li + li { margin-top: 6px; }
+      .module-lessons { list-style: none; margin: 8px 0 0; padding: 0; font-size: 14px; }
+      .module-lessons li { color: var(--dim); padding: 1px 0; }
+      .module-lessons .lbl { color: var(--text); font-weight: 500; }
+
+      .req-list { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 12px; }
+      .req-list li { display: flex; gap: 12px; align-items: flex-start; line-height: 1.55; }
+      .loading { min-height: 60vh; display: grid; place-items: center; color: var(--dim); }
+
+      @media print {
+        body * { visibility: hidden; }
+        #certificate-print, #certificate-print * { visibility: visible; }
+        #certificate-print { position: absolute; inset: 0; margin: 0; box-shadow: none !important; }
+        .no-print { display: none !important; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .progress-fill { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"><div class="loading"><p>Loading the course…</p></div></div>
+    <noscript><p style="padding:24px">This course needs JavaScript enabled to run.</p></noscript>
+    <script>
+    "use strict";
+    /* ================= Agentic AI Course — public edition =================
+       Static build: all course content ships with the page; each student's
+       name, progress, worksheets, quiz scores and certificates live in that
+       student's own browser storage and are restored on return visits. */
+
+    var STRIPE_URL = "https://buy.stripe.com/8x214m63VcCX8Ci7VI67S00";
+    var PAYPAL_BUSINESS = "tagomar691@gmail.com";
+    var PAYPAL_ITEM_NAME = "Agentic AI Course — Full Access (Lifetime)";
+    /* The shared access code itself never appears in this page — only its
+       SHA-256 fingerprint does. Unlocking hashes what the visitor types
+       (trimmed, uppercased) with crypto.subtle and compares fingerprints;
+       a match sets S.unlocked, which persists in browser storage. */
+    var ACCESS_CODE_SHA256 = "cd09be456634db2ee8e3d3b19040a67b5614b8f0bfe8d36808ce2b506166da28";
+    var CODE_NOTE = "Paying by card? Stripe shows your access code on its confirmation page after checkout. Paying with PayPal? Your access code will be emailed to you by ForAllHR after payment.";
+    var HERO_NOTE = "Secure checkout on Stripe or PayPal. Your access code unlocks the full course in your browser the moment you have it.";
+    var PAID_RETURN = /[?&]paid=paypal(?:&|$)/.test(window.location.search || "");
+
+    function pageUrl() { return window.location.href.split(/[?#]/)[0]; }
+    function paypalUrl() {
+      var base = pageUrl();
+      return "https://www.paypal.com/cgi-bin/webscr?cmd=_xclick" +
+        "&business=" + encodeURIComponent(PAYPAL_BUSINESS) +
+        "&item_name=" + encodeURIComponent(PAYPAL_ITEM_NAME) +
+        "&amount=199.00&currency_code=USD&no_shipping=1" +
+        "&return=" + encodeURIComponent(base + "?paid=paypal") +
+        "&cancel_return=" + encodeURIComponent(base);
+    }
+    function enrollCtaHtml(paypalLabel) {
+      return '<a class="btn btn-accent" href="' + STRIPE_URL + '" target="_blank" rel="noopener">Pay with Card — Stripe</a>' +
+        '<a class="btn btn-paypal" href="' + paypalUrl() + '" target="_blank" rel="noopener">' + (paypalLabel || "Pay with PayPal") + "</a>";
+    }
+    function codeFormHtml(idp, onDark) {
+      return '<form data-code-form="' + idp + '" novalidate>' +
+        '<label for="code-' + idp + '" class="small" style="font-weight:500;display:block">I already paid — enter access code</label>' +
+        '<input id="code-' + idp + '" class="text-input code-input" type="text" placeholder="Access code" autocomplete="off" autocapitalize="characters" spellcheck="false" style="margin-top:8px" />' +
+        '<p class="err-msg hidden" data-code-err role="alert"></p>' +
+        '<button type="submit" class="btn ' + (onDark ? "btn-white10" : "btn-navy") + '" style="margin-top:12px;width:100%">Unlock the course</button></form>';
+    }
+    function paidPanelHtml(idp) {
+      return '<div class="card" style="border:2px solid var(--success)">' +
+        '<h2 style="font-size:20px;font-weight:600">Thanks for enrolling with PayPal!</h2>' +
+        '<p class="small" style="margin-top:6px;line-height:1.65">Your access code will be emailed to you by ForAllHR — check the inbox of the email address on your PayPal account (and the spam folder, just in case). When it arrives, enter it here to unlock the full course in this browser:</p>' +
+        '<div style="margin-top:16px">' + codeFormHtml(idp) + "</div></div>";
+    }
+    function sha256Hex(text) {
+      var data = new TextEncoder().encode(text);
+      return window.crypto.subtle.digest("SHA-256", data).then(function (buf) {
+        var bytes = new Uint8Array(buf);
+        var hex = "";
+        for (var i = 0; i < bytes.length; i++) hex += ("0" + bytes[i].toString(16)).slice(-2);
+        return hex;
+      });
+    }
+    function wireCodeForms(scope) {
+      if (!scope) return;
+      var forms = scope.querySelectorAll("[data-code-form]");
+      for (var i = 0; i < forms.length; i++) {
+        forms[i].addEventListener("submit", function (e) {
+          e.preventDefault();
+          var form = this;
+          var input = form.querySelector(".code-input");
+          var err = form.querySelector("[data-code-err]");
+          var code = (input.value || "").trim().toUpperCase();
+          var fail = function () {
+            err.textContent = "That code doesn't match. Check the code from your checkout and try again.";
+            err.classList.remove("hidden");
+          };
+          err.classList.add("hidden");
+          if (!code || !window.crypto || !window.crypto.subtle) { fail(); return; }
+          sha256Hex(code).then(function (hex) {
+            if (hex === ACCESS_CODE_SHA256) {
+              S.unlocked = true;
+              persist();
+              render();
+              window.scrollTo({ top: 0 });
+            } else fail();
+          }, fail);
+        });
+      }
+    }
+    var LS_KEY = "agentic-ai-course-public-v1";
+    var TOTAL_UNITS = 48; // 40 lessons + 8 module quizzes
+    var CAPSTONE_FIELDS = ["nameJob", "instructions", "tools", "memoryPlan", "guardrails", "launchPlan"];
+
+    /* Video for every lesson that has one: all five Module 1 lessons and the
+       opening lesson of Modules 2–8 (same clips as the private app). */
+    var LESSON_VIDEOS = {
+      "1.1": { src: "assets/asset-01.mp4", poster: "assets/asset-01.jpg" },
+      "1.2": { src: "assets/asset-02.mp4", poster: "assets/asset-02.jpg" },
+      "1.3": { src: "assets/asset-03.mp4", poster: "assets/asset-03.jpg" },
+      "1.4": { src: "assets/asset-04.mp4", poster: "assets/asset-04.jpg" },
+      "1.5": { src: "assets/asset-05.mp4", poster: "assets/asset-05.jpg" },
+      "2.1": { src: "assets/asset-06.mp4", poster: "assets/asset-06.jpg" },
+      "3.1": { src: "assets/asset-07.mp4", poster: "assets/asset-07.jpg" },
+      "4.1": { src: "assets/asset-08.mp4", poster: "assets/asset-08.jpg" },
+      "5.1": { src: "assets/asset-09.mp4", poster: "assets/asset-09.jpg" },
+      "6.1": { src: "assets/asset-10.mp4", poster: "assets/asset-10.jpg" },
+      "7.1": { src: "assets/asset-11.mp4", poster: "assets/asset-11.jpg" },
+      "8.1": { src: "assets/asset-12.mp4", poster: "assets/asset-12.jpg" }
+    };
+
+    var M1_EXERCISE_FIELDS = [
+      ["agentName", "1. Name your agent", "e.g. Monday Report Agent", 1],
+      ["agentJob", "2. Its job — one or two sentences, with a checkable definition of “done”", "e.g. Every Sunday evening, gather last week's sales numbers and draft my Monday report. Done = a complete draft in my documents, with every figure sourced.", 3],
+      ["agentTools", "3. Its tools — list each one and mark it read (R) or write (W)", "e.g. Read spreadsheet (R), read email (R), create document (W)", 3],
+      ["agentRules", "4. Its rules & guardrails — what needs your approval? When must it stop and ask?", "e.g. Never send anything without my approval. Stop and ask if a figure is missing or looks wrong.", 3],
+      ["firstTask", "5. Its first task — written exactly as you would give it", "e.g. Prepare this week's Monday report draft from the sales sheet and flag anything unusual.", 3]
+    ];
+
+    /* ---------- storage (with in-memory fallback if storage is blocked) ---------- */
+    var memFallback = null;
+    var store = {
+      load: function () {
+        try { var raw = localStorage.getItem(LS_KEY); if (raw) return JSON.parse(raw); }
+        catch (e) { if (memFallback) return memFallback; }
+        return null;
+      },
+      save: function (s) {
+        memFallback = s;
+        try { localStorage.setItem(LS_KEY, JSON.stringify(s)); } catch (e) { /* in-memory only */ }
+      }
+    };
+
+    function defaultState() {
+      return {
+        unlocked: false,
+        name: "",
+        completedLessons: [],
+        quizzes: {},          // module -> { best, attempts, passed }
+        exercise: { agentName: "", agentJob: "", agentTools: "", agentRules: "", firstTask: "" },
+        moduleExercises: {},  // module -> { fieldKey: value }
+        certificates: {}      // scope ("M1".."M8","FINAL") -> { code, issuedAt }
+      };
+    }
+    var S = store.load() || defaultState();
+    // Tolerate older/partial shapes.
+    (function () {
+      var d = defaultState();
+      for (var k in d) if (S[k] === undefined) S[k] = d[k];
+    })();
+    function persist() { store.save(S); }
+
+    /* ---------- course data (loaded from assets/asset-01.json) ---------- */
+    var COURSE = null;
+    function lessonsOf(n) { return (COURSE && COURSE.lessonsByModule[String(n)]) || []; }
+    function quizOf(n) { return (COURSE && COURSE.quizzes[String(n)]) || []; }
+    function moduleTitle(n) { var m = COURSE.modules[n - 1]; return m ? m.title : "Module " + n; }
+    function lessonById(id) {
+      for (var n = 1; n <= 8; n++) { var l = lessonsOf(n); for (var i = 0; i < l.length; i++) if (l[i].id === id) return l[i]; }
+      return null;
+    }
+
+    /* ---------- derived module state (mirrors the original app) ---------- */
+    function modInfo(n) {
+      var ids = lessonsOf(n).map(function (l) { return l.id; });
+      var done = ids.filter(function (id) { return S.completedLessons.indexOf(id) >= 0; }).length;
+      var q = S.quizzes[String(n)] || { best: 0, attempts: 0, passed: false };
+      return {
+        module: n,
+        paywalled: n > 1 && !S.unlocked,
+        unlocked: n === 1 || (S.unlocked && ((S.quizzes[String(n - 1)] || {}).passed === true)),
+        lessonsDone: done,
+        allLessonsDone: done === ids.length && ids.length > 0,
+        quizBestScore: q.best || 0,
+        quizAttempts: q.attempts || 0,
+        quizPassed: q.passed === true,
+        complete: done === ids.length && ids.length > 0 && q.passed === true
+      };
+    }
+    function allModules() { var a = []; for (var n = 1; n <= 8; n++) a.push(modInfo(n)); return a; }
+    function capstoneSaved() {
+      var cap = S.moduleExercises["8"] || {};
+      return CAPSTONE_FIELDS.every(function (f) { return (cap[f] || "").trim().length > 0; });
+    }
+    function allModulesComplete() { return allModules().every(function (m) { return m.complete; }); }
+    function finalEligible() { return allModulesComplete() && capstoneSaved(); }
+    function overallPct() {
+      var passed = allModules().filter(function (m) { return m.quizPassed; }).length;
+      return Math.round(((S.completedLessons.length + passed) / TOTAL_UNITS) * 100);
+    }
+    function currentModule() {
+      var ms = allModules();
+      for (var i = 0; i < ms.length; i++) if (ms[i].unlocked && !ms[i].complete) return ms[i].module;
+      return S.unlocked ? 8 : 1;
+    }
+    function nextStep() {
+      var n = currentModule();
+      var info = modInfo(n);
+      var lessons = lessonsOf(n);
+      for (var i = 0; i < lessons.length; i++) {
+        if (S.completedLessons.indexOf(lessons[i].id) < 0) {
+          return { view: { kind: "lesson", id: lessons[i].id }, label: "Continue: " + lessons[i].number + " — " + lessons[i].title };
+        }
+      }
+      if (!info.quizPassed) return { view: { kind: "quiz", module: n }, label: "Take the Module " + n + " quiz" };
+      if (finalEligible() || S.certificates["FINAL"]) return { view: { kind: "certificate", scope: "FINAL" }, label: "View your final certificate" };
+      return { view: { kind: "certificates" }, label: "View your certificates" };
+    }
+    function scopeLabel(scope) {
+      if (scope === "FINAL") return "Agentic AI Course — Final Certificate";
+      var n = Number(scope.slice(1));
+      return "Module " + n + " — " + moduleTitle(n);
+    }
+    function fmtDate(iso) {
+      return new Date(iso).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+    }
+    function makeCode(prefix) {
+      var chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+      var s = "";
+      for (var i = 0; i < 8; i++) s += chars[Math.floor(Math.random() * chars.length)];
+      return "AAI-" + prefix + "-" + s.slice(0, 4) + "-" + s.slice(4);
+    }
+    function esc(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+    }
+
+    /* ================= Views ================= */
+    var app = document.getElementById("app");
+    var view = { kind: "dashboard" };
+    var quizSession = null; // { module, answers, result, warn }
+
+    function setView(v) {
+      view = v;
+      if (v.kind !== "quiz") quizSession = null;
+      render();
+      window.scrollTo({ top: 0 });
+    }
+
+    function render() {
+      if (!COURSE) return;
+      if (!S.name) { renderEnroll(); return; }
+      renderApp();
+    }
+
+    /* ---------------- Enroll / sales view ---------------- */
+    function renderEnroll() {
+      var modulesHtml = COURSE.modules.map(function (m) {
+        var lessons = lessonsOf(m.n).map(function (l) {
+          return '<li><span class="lbl">' + esc(l.number) + ":</span> " + esc(l.title) + "</li>";
+        }).join("");
+        var tag = m.n === 1
+          ? '<p class="xs" style="font-weight:600;color:var(--accent-text);margin-top:6px">FREE PREVIEW — all 5 lessons, videos, and the quiz are open</p>'
+          : '<p class="xs" style="font-weight:500;color:var(--dim);margin-top:6px">🔒 Locked — included with full access</p>';
+        return '<div class="card" style="display:flex;gap:16px">' +
+          '<span class="mod-badge' + (m.n === 1 ? "" : " locked") + '">' + (m.n === 1 ? m.n : "🔒") + "</span>" +
+          '<div style="min-width:0"><p style="font-weight:600">Module ' + m.n + ": " + esc(m.title) + "</p>" +
+          '<p class="small muted" style="margin-top:2px">' + esc(m.desc) + "</p>" + tag +
+          '<ul class="module-lessons">' + lessons +
+          '<li><span class="lbl">Quiz:</span> Module ' + m.n + " assessment — 10 questions, 80% to pass</li></ul>" +
+          "</div></div>";
+      }).join("");
+
+      var profileSection =
+        '<h2 style="font-size:20px;font-weight:600">' + (S.unlocked ? "Create your student profile" : "Start Module 1 — free preview") + "</h2>" +
+        '<p class="small muted" style="margin-top:4px">' + (S.unlocked
+          ? "Your full access is active. Enter your name once — your lessons, worksheets, quiz scores, and certificates are saved in this browser and restored when you return."
+          : "Module 1 is fully open — all 5 lessons, the lesson videos, and the quiz. Enter your name once to begin; your lessons, worksheets, quiz scores, and certificates are saved in this browser and restored when you return.") + "</p>" +
+        '<form id="profile-form" style="margin-top:16px">' +
+        '<label for="student-name" class="small" style="font-weight:500">Your full name (as it should appear on your certificates)</label>' +
+        '<input id="student-name" class="text-input" type="text" placeholder="e.g. Jordan Rivera" autocomplete="name" style="margin-top:8px" />' +
+        '<p class="err-msg hidden" id="profile-err"></p>' +
+        '<button type="submit" class="btn btn-navy" id="profile-submit" style="margin-top:16px;width:100%" disabled>' + (S.unlocked ? "Create my profile &amp; start the course" : "Create my profile &amp; start Module 1 free") + "</button>" +
+        "</form>" +
+        '<p class="xs muted" style="margin-top:12px">The name you enter here is printed on your certificates of completion.</p>';
+
+      var sideCard = S.unlocked ? profileSection :
+        '<h2 style="font-size:20px;font-weight:600">Enroll now</h2>' +
+        '<p class="small muted" style="margin-top:4px">Pay once — $199 — and get lifetime access to everything: all 8 modules, 40 lessons, lesson videos, quizzes, worksheets, and certificates. After paying, use your access code below to unlock the course in this browser.</p>' +
+        '<div style="display:grid;gap:10px;margin-top:16px">' + enrollCtaHtml() + "</div>" +
+        '<p class="xs muted" style="margin-top:12px">' + CODE_NOTE + "</p>" +
+        '<hr style="border:none;border-top:1px solid var(--border);margin:20px 0" />' +
+        codeFormHtml("side") +
+        '<hr style="border:none;border-top:1px solid var(--border);margin:20px 0" />' +
+        profileSection;
+
+      app.innerHTML =
+        '<div class="hero"><div class="wrap hero-inner">' +
+        '<p class="kicker">A COMPLETE, HANDS-ON COURSE</p>' +
+        '<h1>Agentic AI Course</h1>' +
+        '<p class="lede">Learn to design, build, and deploy AI agents that do real work — from the agent loop and tool calling to multi-agent systems, guardrails, and a capstone agent you ship. All 8 modules are complete: 40 lessons, 8 auto-graded quizzes, hands-on worksheets, and certificates.</p>' +
+        '<div class="price-row"><span class="price">$199</span><span class="terms">— one-time payment · full access · lifetime access · certificate of completion included.</span></div>' +
+        (PAID_RETURN && !S.unlocked ? '<div style="margin-top:24px;max-width:672px">' + paidPanelHtml("paid") + "</div>" : "") +
+        (S.unlocked ? "" :
+          '<div class="pay-col">' + enrollCtaHtml("Pay with PayPal — $199") + "</div>" +
+          '<p class="pay-note">' + HERO_NOTE + " Module 1 is free to preview — all 5 lessons, videos, and the quiz.</p>" +
+          '<div class="hero-code">' + codeFormHtml("hero", true) + "</div>") +
+        "</div></div>" +
+        '<div class="wrap"><div class="enroll-grid">' +
+        '<section aria-label="Curriculum">' +
+        '<h2 style="font-size:24px;font-weight:600">What you\'ll learn — 8 modules, 40 lessons</h2>' +
+        '<p class="small muted" style="margin-top:4px">Module 1 is a free preview. With full access, modules unlock in sequence: pass a module\'s quiz (80%+) to open the next. Each module ends with a 10-question quiz and earns its own certificate; finishing all 8 plus the capstone earns the final course certificate.</p>' +
+        '<div class="stack" style="margin-top:16px">' + modulesHtml + "</div>" +
+        '<div class="card card-pad-lg" style="margin-top:24px">' +
+        '<h3 style="font-weight:600;font-size:18px">Included with your $199 enrolment</h3>' +
+        '<ul class="include-list">' +
+        "<li>All 8 modules — 40 lessons, 8 quizzes, and a hands-on worksheet in every module</li>" +
+        "<li>Lifetime access — buy once, learn at your own pace, forever</li>" +
+        "<li>Written lessons with worked examples, plus a lesson video for every Module 1 lesson and a video intro opening Modules 2–8</li>" +
+        "<li>A certificate for every module, and the final Agentic AI Course certificate of completion — each with a unique verification code</li>" +
+        "<li>Progress that saves automatically in your browser and resumes where you left off</li>" +
+        "</ul></div>" +
+        "</section>" +
+        '<aside class="card card-pad-lg enroll-side">' + sideCard + "</aside>" +
+        "</div></div>";
+
+      // Wire up controls.
+      var pf = document.getElementById("profile-form");
+      if (pf) {
+        var nameInput = document.getElementById("student-name");
+        var submitBtn = document.getElementById("profile-submit");
+        nameInput.addEventListener("input", function () { submitBtn.disabled = !nameInput.value.trim(); });
+        pf.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var n = nameInput.value.trim();
+          if (!n) return;
+          S.name = n;
+          persist();
+          setView({ kind: "dashboard" });
+        });
+        nameInput.focus();
+      }
+      wireCodeForms(app);
+    }
+
+    /* ---------------- In-course app shell ---------------- */
+    function renderApp() {
+      var progress = overallPct();
+      var navKind = view.kind === "lesson" || view.kind === "quiz" ? "curriculum"
+        : view.kind === "certificate" ? "certificates" : view.kind;
+      var certCount = Object.keys(S.certificates).length;
+      var navItems = [
+        ["dashboard", "Dashboard"],
+        ["curriculum", "Curriculum"],
+        ["certificates", "Certificates" + (certCount ? " (" + certCount + ")" : "")]
+      ];
+      var navHtml = navItems.map(function (it) {
+        return '<button type="button" class="nav-btn' + (navKind === it[0] ? " active" : "") + '" data-nav="' + it[0] + '"' +
+          (navKind === it[0] ? ' aria-current="page"' : "") + ">" + esc(it[1]) + "</button>";
+      }).join("");
+
+      app.innerHTML =
+        '<header class="app-header no-print"><div class="wrap">' +
+        '<div class="row"><div style="min-width:0"><p class="title">Agentic AI Course</p>' +
+        '<p class="student">Student: ' + esc(S.name) + "</p></div>" +
+        '<div class="right"><span class="pct-pill">' + progress + '% of course complete</span>' +
+        '<button type="button" class="link-btn" id="switch-student">Switch student</button></div></div>' +
+        '<nav class="app-nav" aria-label="Course">' + navHtml + "</nav>" +
+        "</div></header>" +
+        '<main><div class="wrap" id="view-root"></div></main>';
+
+      var root = document.getElementById("view-root");
+      document.getElementById("switch-student").addEventListener("click", function () {
+        // Mirror of the original app: the profile lives in this browser, so
+        // switching clears the local profile and all of its progress.
+        S = defaultState();
+        S.unlocked = false;
+        persist();
+        setView({ kind: "dashboard" });
+      });
+      var navBtns = app.querySelectorAll("[data-nav]");
+      for (var i = 0; i < navBtns.length; i++) {
+        navBtns[i].addEventListener("click", function () { setView({ kind: this.getAttribute("data-nav") }); });
+      }
+
+      if (view.kind === "dashboard") renderDashboard(root);
+      else if (view.kind === "curriculum") renderCurriculum(root);
+      else if (view.kind === "lesson") { var l = lessonById(view.id); if (l) renderLesson(root, l); else renderCurriculum(root); }
+      else if (view.kind === "quiz") renderQuiz(root, view.module);
+      else if (view.kind === "certificates") renderCertificates(root);
+      else if (view.kind === "certificate") renderCertificate(root, view.scope);
+    }
+
+    function badgeHtml(info) {
+      if (info.complete) return '<span class="mod-badge done">✓</span>';
+      if (info.unlocked) return '<span class="mod-badge">' + info.module + "</span>";
+      return '<span class="mod-badge locked" aria-hidden="true">🔒</span>';
+    }
+
+    /* ---------------- Dashboard ---------------- */
+    function renderDashboard(root) {
+      var progress = overallPct();
+      var step = nextStep();
+      var allDone = allModules().every(function (m) { return m.complete; });
+      var quizzesPassed = allModules().filter(function (m) { return m.quizPassed; }).length;
+      var certCount = Object.keys(S.certificates).length;
+      var firstName = S.name.split(" ")[0];
+
+      var modsHtml = COURSE.modules.map(function (m) {
+        var info = modInfo(m.n);
+        var cert = S.certificates["M" + m.n];
+        var status;
+        if (!info.unlocked) status = info.paywalled ? "Locked — part of the full course. Enroll to unlock." : "Locked — pass the Module " + (m.n - 1) + " quiz to unlock.";
+        else if (info.complete) status = "Complete · Quiz passed with " + info.quizBestScore + "% best" + (cert ? " · Certificate " + esc(cert.code) : "");
+        else status = info.lessonsDone + "/5 lessons · Quiz: " + (info.quizPassed ? "passed (" + info.quizBestScore + "%)" : info.quizAttempts ? "best " + info.quizBestScore + "% — 80% needed" : "not attempted");
+        var action = "";
+        if (info.unlocked && !info.complete) action = '<button type="button" class="btn btn-navy btn-sm" data-act="continue" data-m="' + m.n + '">' + (info.lessonsDone < 5 ? "Continue" : "Take quiz") + "</button>";
+        else if (info.complete) action = '<button type="button" class="btn btn-ghost btn-sm" data-act="cert" data-m="' + m.n + '">Certificate</button>';
+        return '<div class="card"><div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:12px">' +
+          badgeHtml(info) +
+          '<div style="flex:1;min-width:220px"><h3 style="font-weight:600">Module ' + m.n + ": " + esc(m.title) + "</h3>" +
+          '<p class="small muted" style="margin-top:2px">' + esc(status) + "</p></div>" + action +
+          "</div></div>";
+      }).join("");
+
+      var finalCert = S.certificates["FINAL"];
+      var finalHtml = finalCert
+        ? '<p class="small" style="margin-top:4px;color:var(--success);font-weight:500">Issued — all 8 modules complete and capstone saved. 🎓</p>'
+        : '<p class="small muted" style="margin-top:4px">Unlocks when all 8 modules are complete (lessons + passed quiz) and your Module 8 capstone worksheet is saved. ' +
+          allModules().filter(function (m) { return m.complete; }).length + "/8 modules complete" + (capstoneSaved() ? " · capstone saved ✓" : "") + ".</p>";
+
+      root.innerHTML =
+        '<div class="stack-lg">' +
+        (PAID_RETURN && !S.unlocked ? paidPanelHtml("paid") : "") +
+        '<section class="navy-panel">' +
+        '<p class="small" style="color:rgba(255,255,255,.7)">Welcome back, ' + esc(firstName) + "</p>" +
+        '<h2 style="font-size:28px;font-weight:600;margin-top:4px">' + (allDone ? "Course complete — congratulations!" : "Continue where you left off") + "</h2>" +
+        '<div style="margin-top:16px" role="progressbar" aria-valuenow="' + progress + '" aria-valuemin="0" aria-valuemax="100" aria-label="Overall course progress">' +
+        '<div class="progress-track"><div class="progress-fill" style="width:' + progress + '%"></div></div>' +
+        '<p class="small" style="color:rgba(255,255,255,.8);margin-top:8px">' + progress + "% of the full course · " + S.completedLessons.length + " of 40 lessons · " + quizzesPassed + " of 8 quizzes passed · " + certCount + " certificate" + (certCount === 1 ? "" : "s") + " earned</p></div>" +
+        '<div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:12px">' +
+        '<button type="button" class="btn btn-accent" id="dash-next"></button>' +
+        '<button type="button" class="btn btn-white10" id="dash-browse">Browse curriculum</button>' +
+        "</div></section>" +
+        (S.unlocked ? "" :
+          '<section class="card card-pad-lg" aria-label="Enroll in the full course">' +
+          '<h3 style="font-weight:600;font-size:20px">Unlock the full course — $199, lifetime access</h3>' +
+          '<p class="small muted" style="margin-top:4px">You are previewing Module 1 free. Enroll once to open Modules 2–8: all 40 lessons, lesson videos, quizzes, worksheets, and certificates.</p>' +
+          '<div style="margin-top:16px;display:grid;gap:10px;max-width:440px">' + enrollCtaHtml() + "</div>" +
+          '<p class="xs muted" style="margin-top:12px">' + CODE_NOTE + "</p>" +
+          '<div style="margin-top:16px;max-width:440px">' + codeFormHtml("dash") + "</div></section>") +
+        '<section aria-label="Your modules" class="stack">' + modsHtml + "</section>" +
+        '<section class="card" aria-label="Final certificate status">' +
+        '<h3 style="font-weight:600">Final Certificate — Agentic AI Course</h3>' + finalHtml +
+        '<button type="button" class="btn btn-navy btn-sm" id="dash-final" style="margin-top:12px">Final certificate page</button>' +
+        "</section></div>";
+
+      var nextBtn = document.getElementById("dash-next");
+      nextBtn.textContent = step.label;
+      nextBtn.addEventListener("click", function () { setView(step.view); });
+      document.getElementById("dash-browse").addEventListener("click", function () { setView({ kind: "curriculum" }); });
+      document.getElementById("dash-final").addEventListener("click", function () { setView({ kind: "certificate", scope: "FINAL" }); });
+      var acts = root.querySelectorAll("[data-act]");
+      for (var i = 0; i < acts.length; i++) {
+        acts[i].addEventListener("click", function () {
+          var m = Number(this.getAttribute("data-m"));
+          if (this.getAttribute("data-act") === "cert") { setView({ kind: "certificate", scope: "M" + m }); return; }
+          var lessons = lessonsOf(m);
+          for (var j = 0; j < lessons.length; j++) {
+            if (S.completedLessons.indexOf(lessons[j].id) < 0) { setView({ kind: "lesson", id: lessons[j].id }); return; }
+          }
+          setView({ kind: "quiz", module: m });
+        });
+      }
+      wireCodeForms(root);
+    }
+
+    /* ---------------- Curriculum ---------------- */
+    function renderCurriculum(root) {
+      var sections = COURSE.modules.map(function (m) {
+        var info = modInfo(m.n);
+        var cert = S.certificates["M" + m.n];
+        var rows = lessonsOf(m.n).map(function (l) {
+          var done = S.completedLessons.indexOf(l.id) >= 0;
+          var inner = '<span class="' + (done ? "done-mark" : "todo-mark") + '">' + (done ? "✓" : "○") + '</span>' +
+            '<span class="flex1">' + esc(l.number) + ": " + esc(l.title) + (l.hasExercise ? " ✎" : "") + '</span>' +
+            '<span class="xs muted">' + l.minutes + " min</span>";
+          if (info.unlocked) return '<li><button type="button" class="lesson-row" data-lesson="' + l.id + '">' + inner + "</button></li>";
+          return '<li><div class="lesson-row static" aria-disabled="true">' + inner + "</div></li>";
+        }).join("");
+        var quizInner = '<span class="' + (info.quizPassed ? "done-mark" : "todo-mark") + '">' + (info.quizPassed ? "✓" : "○") + '</span>' +
+          '<span class="flex1">Module ' + m.n + ' Quiz — 10 questions</span>' +
+          '<span class="xs muted">' + (info.unlocked ? (info.quizAttempts ? "Best " + info.quizBestScore + "%" : "Not attempted") : "Locked") + "</span>";
+        rows += info.unlocked
+          ? '<li><button type="button" class="lesson-row" data-quiz="' + m.n + '">' + quizInner + "</button></li>"
+          : '<li><div class="lesson-row static" aria-disabled="true">' + quizInner + "</div></li>";
+        if (cert) {
+          rows += '<li><button type="button" class="lesson-row" data-cert="M' + m.n + '"><span>🎓</span><span class="flex1" style="font-weight:500">Module ' + m.n + ' Certificate</span><span class="xs muted mono">' + esc(cert.code) + "</span></button></li>";
+        }
+        return '<section class="card" aria-label="Module ' + m.n + '"><div style="display:flex;align-items:flex-start;gap:12px">' +
+          badgeHtml(info) +
+          '<div style="flex:1;min-width:0"><h3 style="font-weight:600">Module ' + m.n + ": " + esc(m.title) + "</h3>" +
+          '<p class="small muted" style="margin-top:2px">' + esc(m.desc) + "</p>" +
+          (!info.unlocked ? '<p class="xs" style="font-weight:500;color:var(--dim);margin-top:8px">' + (info.paywalled ? "🔒 Locked — this module is part of the full course. Enroll for lifetime access to all 8 modules." : "🔒 Locked — pass the Module " + (m.n - 1) + " quiz (80%+) to unlock this module.") + "</p>" : "") +
+          '<ul class="lesson-list">' + rows + "</ul>" +
+          "</div></div></section>";
+      }).join("");
+
+      root.innerHTML =
+        "<h2 style=\"font-size:24px;font-weight:600\">Curriculum</h2>" +
+        '<p class="muted" style="margin-top:4px">Agentic AI Course — $199 full access · lifetime access · a certificate per module plus the final course certificate. Modules unlock in sequence: pass a module\'s quiz at 80%+ to open the next.</p>' +
+        '<div class="stack" style="margin-top:20px">' + sections + "</div>";
+
+      wireNavButtons(root);
+    }
+
+    function wireNavButtons(root) {
+      var lb = root.querySelectorAll("[data-lesson]");
+      for (var i = 0; i < lb.length; i++) lb[i].addEventListener("click", function () { setView({ kind: "lesson", id: this.getAttribute("data-lesson") }); });
+      var qb = root.querySelectorAll("[data-quiz]");
+      for (var j = 0; j < qb.length; j++) qb[j].addEventListener("click", function () { setView({ kind: "quiz", module: Number(this.getAttribute("data-quiz")) }); });
+      var cb = root.querySelectorAll("[data-cert]");
+      for (var k = 0; k < cb.length; k++) cb[k].addEventListener("click", function () { setView({ kind: "certificate", scope: this.getAttribute("data-cert") }); });
+    }
+
+    /* ---------------- Certificates list ---------------- */
+    function renderCertificates(root) {
+      var scopes = COURSE.modules.map(function (m) { return "M" + m.n; }).concat(["FINAL"]);
+      var cards = scopes.map(function (scope) {
+        var cert = S.certificates[scope];
+        var isFinal = scope === "FINAL";
+        var info = isFinal ? null : modInfo(Number(scope.slice(1)));
+        var eligible = isFinal ? finalEligible() : info.complete;
+        var detail;
+        if (cert) detail = "Issued " + fmtDate(cert.issuedAt) + ' · <span class="mono">' + esc(cert.code) + "</span>";
+        else if (eligible) detail = "You're eligible — claim your certificate.";
+        else if (isFinal) detail = allModules().filter(function (m) { return m.complete; }).length + "/8 modules complete" + (capstoneSaved() ? " · capstone saved" : " · capstone not saved yet");
+        else if (!info.unlocked) detail = info.paywalled ? "Locked — part of the full course. Enroll to unlock." : "Locked — pass the Module " + (Number(scope.slice(1)) - 1) + " quiz first";
+        else detail = info.lessonsDone + "/5 lessons · Quiz " + (info.quizPassed ? "passed" : "not passed yet");
+        return '<div class="card"><p style="font-size:24px" aria-hidden="true">' + (cert ? "🎓" : eligible ? "✨" : "🔒") + "</p>" +
+          '<h3 style="font-weight:600;margin-top:8px">' + esc(scopeLabel(scope)) + "</h3>" +
+          '<p class="small muted" style="margin-top:4px">' + detail + "</p>" +
+          '<button type="button" class="btn btn-navy btn-sm" data-cert="' + scope + '" style="margin-top:12px">' + (cert ? "View certificate" : "Certificate page") + "</button></div>";
+      }).join("");
+      root.innerHTML =
+        "<h2 style=\"font-size:24px;font-weight:600\">Your certificates</h2>" +
+        '<p class="muted" style="margin-top:4px">One certificate per module — earned by completing its 5 lessons and passing its quiz — plus the final course certificate when all 8 modules and the capstone are done.</p>' +
+        '<div class="cert-grid" style="margin-top:20px">' + cards + "</div>";
+      wireNavButtons(root);
+    }
+
+    /* ---------------- Lesson video ----------------
+       Same download-then-play player as the original app: the clip is
+       downloaded once with fetch() and played from a local blob object
+       URL — NOT streamed from the asset URL. Phone webviews refuse to
+       decode a <video> whose server answers a plain 200 without
+       byte-range support or serves a generic content type; an object URL
+       is already fully local, and the blob is re-typed video/mp4. If the
+       download fails, fall back to the plain asset URL; a genuine decode
+       error on both paths swaps in a direct link instead of a dead box.
+       Playback starts from a real tap so play() runs inside the gesture. */
+    function mountLessonVideo(container, lesson) {
+      var media = LESSON_VIDEOS[lesson.id] || LESSON_VIDEOS["1.1"];
+      var videoSrc = media.src, posterSrc = media.poster;
+      container.innerHTML =
+        '<div class="video-box">' +
+        '<video poster="' + posterSrc + '" playsinline preload="auto" aria-label="' + esc(lesson.number) + " video: " + esc(lesson.title) + '">' +
+        "Your browser does not support embedded video. The full written lesson below covers the same material.</video>" +
+        '<button type="button" class="video-play-overlay" aria-label="Play the lesson video: ' + esc(lesson.title) + '">' +
+        '<span class="video-play-btn"><svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true" style="margin-left:4px"><path d="M8 5v14l11-7z"/></svg></span>' +
+        "</button></div>" +
+        '<figcaption class="video-caption"><span class="vt">▶ Lesson video — “' + esc(lesson.title) + '”</span><span class="vs">Watch the video, then read the full lesson below.</span></figcaption>';
+      var video = container.querySelector("video");
+      var overlay = container.querySelector(".video-play-overlay");
+      var caption = container.querySelector(".video-caption");
+      var blobUrl = null, useDirect = false, wantPlay = false, started = false, failed = false;
+
+      function currentSrc() { return blobUrl || (useDirect ? videoSrc : null); }
+      function tryPlay() {
+        var src = currentSrc();
+        if (!src) { useDirect = true; wantPlay = true; video.src = videoSrc; video.load(); return; }
+        var p = video.play();
+        if (p && p.catch) p.catch(function () { wantPlay = true; video.controls = true; overlay.classList.add("hidden"); });
+      }
+      var timer = window.setTimeout(function () {
+        if (!blobUrl && !failed) { useDirect = true; if (!video.src) video.src = videoSrc; if (wantPlay) { video.load(); video.play().catch(function () {}); } }
+      }, 6000);
+      fetch(videoSrc)
+        .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.blob(); })
+        .then(function (b) {
+          if (b.type.indexOf("text/html") >= 0) throw new Error("asset route returned HTML");
+          var typed = b.type === "video/mp4" ? b : new Blob([b], { type: "video/mp4" });
+          blobUrl = URL.createObjectURL(typed);
+          video.src = blobUrl;
+          if (wantPlay && !started) { video.load(); video.play().catch(function () { video.controls = true; }); }
+        })
+        .catch(function () {
+          useDirect = true;
+          if (!video.src) video.src = videoSrc;
+          if (wantPlay && !started) { video.load(); video.play().catch(function () { video.controls = true; }); }
+        })
+        .then(function () { window.clearTimeout(timer); }, function () { window.clearTimeout(timer); });
+
+      overlay.addEventListener("click", function () { wantPlay = true; tryPlay(); });
+      video.addEventListener("play", function () { started = true; video.controls = true; overlay.classList.add("hidden"); });
+      video.addEventListener("error", function () {
+        if (!video.src) return;
+        failed = true;
+        overlay.classList.add("hidden");
+        caption.innerHTML = '<span class="vt">The video couldn\'t play in this browser.</span> <a href="' + videoSrc + '" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;font-size:14px;font-weight:500">Open the video directly</a><span class="vs" style="flex-basis:100%">The full written lesson below covers the same material.</span>';
+      });
+    }
+
+    /* ---------------- Lesson view ---------------- */
+    function renderLesson(root, lesson) {
+      var module = lesson.module || Number(lesson.id.split(".")[0]);
+      var info = modInfo(module);
+      if (!info.unlocked) {
+        if (info.paywalled) {
+          root.innerHTML =
+            '<div class="card card-pad-lg" style="max-width:672px;margin:0 auto">' +
+            '<h2 style="font-size:24px;font-weight:600">🔒 Module ' + module + " is part of the full course</h2>" +
+            '<p class="muted" style="margin-top:8px">Module 1 is free to preview. Enroll once — $199, lifetime access — to open Module ' + module + ": " + esc(moduleTitle(module)) + " and the rest of the course: all 40 lessons, videos, quizzes, worksheets, and certificates.</p>" +
+            '<div style="margin-top:20px;display:grid;gap:10px;max-width:440px">' + enrollCtaHtml() + "</div>" +
+            '<p class="xs muted" style="margin-top:12px">' + CODE_NOTE + "</p>" +
+            '<div style="margin-top:16px;max-width:440px">' + codeFormHtml("lesson") + "</div></div>";
+          wireCodeForms(root);
+          return;
+        }
+        root.innerHTML =
+          '<div class="card card-pad-lg" style="max-width:672px;margin:0 auto">' +
+          '<h2 style="font-size:24px;font-weight:600">🔒 Module ' + module + " is locked</h2>" +
+          '<p class="muted" style="margin-top:8px">Modules unlock in sequence. Pass the Module ' + (module - 1) + " quiz with 80% or higher to open Module " + module + ": " + esc(moduleTitle(module)) + ".</p>" +
+          '<button type="button" class="btn btn-navy" id="locked-go" style="margin-top:20px">Go to the Module ' + (module - 1) + " quiz</button></div>";
+        document.getElementById("locked-go").addEventListener("click", function () { setView({ kind: "quiz", module: module - 1 }); });
+        return;
+      }
+      var done = S.completedLessons.indexOf(lesson.id) >= 0;
+      var siblings = lessonsOf(module);
+      var idx = -1;
+      for (var i = 0; i < siblings.length; i++) if (siblings[i].id === lesson.id) idx = i;
+      var prev = idx > 0 ? siblings[idx - 1] : null;
+      var next = idx >= 0 && idx < siblings.length - 1 ? siblings[idx + 1] : null;
+
+      var sectionsHtml = lesson.sections.map(function (s) {
+        var h = "<section><h3>" + esc(s.heading) + "</h3>";
+        h += s.paragraphs.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("");
+        if (s.bullets) h += "<ul>" + s.bullets.map(function (b) { return "<li>" + esc(b) + "</li>"; }).join("") + "</ul>";
+        if (s.example) h += '<div class="example-box"><span style="font-weight:600">In practice: </span>' + esc(s.example) + "</div>";
+        return h + "</section>";
+      }).join("");
+
+      var videoHtml = lesson.hasVideo && LESSON_VIDEOS[lesson.id]
+        ? '<figure class="video-figure" id="lesson-video"></figure>' : "";
+
+      var exerciseHtml = "";
+      if (lesson.id === "1.5") {
+        exerciseHtml =
+          '<section class="card worksheet" aria-label="Design your agent worksheet">' +
+          '<h3 style="font-size:20px;font-weight:600">✎ Worksheet: Design your agent</h3>' +
+          '<p class="small muted" style="margin-top:4px">Fill in each prompt. Your answers save in this browser — you\'ll build this agent in the Module 8 capstone.</p>' +
+          '<div style="margin-top:16px">' +
+          M1_EXERCISE_FIELDS.map(function (f) {
+            return '<div class="field"><label for="ex-' + f[0] + '">' + esc(f[1]) + '</label>' +
+              '<textarea id="ex-' + f[0] + '" rows="' + f[3] + '" placeholder="' + esc(f[2]) + '">' + esc(S.exercise[f[0]] || "") + "</textarea></div>";
+          }).join("") + "</div>" +
+          '<p class="saved-msg hidden" id="ex-saved" role="status">Worksheet saved to your profile.</p>' +
+          '<button type="button" class="btn btn-navy" id="ex-save" style="margin-top:16px">Save worksheet</button>' +
+          "</section>";
+      } else if (lesson.hasExercise && lesson.exerciseFields) {
+        var saved = S.moduleExercises[String(module)] || {};
+        exerciseHtml =
+          '<section class="card worksheet" aria-label="' + esc(lesson.exerciseTitle || "Worksheet") + '">' +
+          '<h3 style="font-size:20px;font-weight:600">✎ ' + esc(lesson.exerciseTitle || "Worksheet") + "</h3>" +
+          '<p class="small muted" style="margin-top:4px">' + esc(lesson.exerciseIntro || "") + "</p>" +
+          '<div style="margin-top:16px">' +
+          lesson.exerciseFields.map(function (f) {
+            return '<div class="field"><label for="mex-' + module + "-" + f.key + '">' + esc(f.label) + '</label>' +
+              '<textarea id="mex-' + module + "-" + f.key + '" data-mex="' + f.key + '" rows="' + (f.rows || 3) + '" placeholder="' + esc(f.placeholder) + '">' + esc(saved[f.key] || "") + "</textarea></div>";
+          }).join("") + "</div>" +
+          '<p class="xs muted" style="margin-top:12px"><span id="mex-count"></span> of ' + lesson.exerciseFields.length + " fields completed" + (module === 8 ? " — the final certificate requires all fields saved" : "") + ".</p>" +
+          '<p class="saved-msg hidden" id="mex-saved" role="status"></p>' +
+          '<button type="button" class="btn btn-navy" id="mex-save" style="margin-top:12px">' + (module === 8 ? "Save capstone" : "Save worksheet") + "</button>" +
+          "</section>";
+      }
+
+      var completeHtml = done
+        ? '<span class="complete-chip">✓ Lesson complete</span><button type="button" class="link-btn" id="lesson-unmark" style="color:var(--dim);font-size:14px">Mark not complete</button>'
+        : '<button type="button" class="btn" id="lesson-mark" style="background:var(--success);color:#fff">Mark complete</button>';
+      var navHtml = "";
+      if (prev) navHtml += '<button type="button" class="btn btn-ghost btn-sm" data-goto-lesson="' + prev.id + '">← ' + esc(prev.number) + "</button>";
+      if (next) navHtml += '<button type="button" class="btn btn-ghost btn-sm" data-goto-lesson="' + next.id + '">' + esc(next.number) + " →</button>";
+      else navHtml += '<button type="button" class="btn btn-navy btn-sm" id="lesson-to-quiz">Take the Module ' + module + " quiz →</button>";
+
+      root.innerHTML =
+        '<article class="lesson-article">' +
+        '<button type="button" class="link-btn" id="lesson-back" style="color:var(--accent-text);font-size:14px;font-weight:500;padding-left:0">← Back to curriculum</button>' +
+        '<p class="small" style="font-weight:600;color:var(--accent-text);margin-top:8px">' + esc(lesson.number) + " · Module " + module + " — " + esc(moduleTitle(module)) + " · " + lesson.minutes + " min read</p>" +
+        '<h2 style="font-size:30px;font-weight:600;margin-top:4px;line-height:1.25">' + esc(lesson.title) + "</h2>" +
+        '<p class="intro">' + esc(lesson.intro) + "</p>" +
+        videoHtml +
+        sectionsHtml +
+        exerciseHtml +
+        '<section class="card takeaways" aria-label="Key takeaways"><h3 style="font-weight:600;font-size:18px">Key takeaways</h3>' +
+        '<ul style="margin-top:8px;padding-left:20px;line-height:1.65">' + lesson.takeaways.map(function (t) { return "<li style='margin-top:6px'>" + esc(t) + "</li>"; }).join("") + "</ul></section>" +
+        '<div style="margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:12px">' + completeHtml +
+        '<span style="margin-left:auto;display:flex;gap:8px;flex-wrap:wrap">' + navHtml + "</span></div>" +
+        "</article>";
+
+      if (videoHtml) mountLessonVideo(document.getElementById("lesson-video"), lesson);
+      document.getElementById("lesson-back").addEventListener("click", function () { setView({ kind: "curriculum" }); });
+      var markBtn = document.getElementById("lesson-mark");
+      if (markBtn) markBtn.addEventListener("click", function () {
+        if (S.completedLessons.indexOf(lesson.id) < 0) S.completedLessons.push(lesson.id);
+        persist(); render();
+      });
+      var unmarkBtn = document.getElementById("lesson-unmark");
+      if (unmarkBtn) unmarkBtn.addEventListener("click", function () {
+        S.completedLessons = S.completedLessons.filter(function (id) { return id !== lesson.id; });
+        persist(); render();
+      });
+      var toQuiz = document.getElementById("lesson-to-quiz");
+      if (toQuiz) toQuiz.addEventListener("click", function () { setView({ kind: "quiz", module: module }); });
+      var gl = root.querySelectorAll("[data-goto-lesson]");
+      for (var g = 0; g < gl.length; g++) gl[g].addEventListener("click", function () { setView({ kind: "lesson", id: this.getAttribute("data-goto-lesson") }); });
+
+      var exSave = document.getElementById("ex-save");
+      if (exSave) exSave.addEventListener("click", function () {
+        M1_EXERCISE_FIELDS.forEach(function (f) {
+          var el = document.getElementById("ex-" + f[0]);
+          if (el) S.exercise[f[0]] = el.value;
+        });
+        persist();
+        document.getElementById("ex-saved").classList.remove("hidden");
+      });
+      var mexSave = document.getElementById("mex-save");
+      if (mexSave) {
+        var countEl = document.getElementById("mex-count");
+        var textareas = root.querySelectorAll("[data-mex]");
+        var updateCount = function () {
+          var filled = 0;
+          for (var t = 0; t < textareas.length; t++) if (textareas[t].value.trim().length > 0) filled++;
+          if (countEl) countEl.textContent = filled;
+        };
+        for (var t2 = 0; t2 < textareas.length; t2++) textareas[t2].addEventListener("input", updateCount);
+        updateCount();
+        mexSave.addEventListener("click", function () {
+          var vals = {};
+          for (var t3 = 0; t3 < textareas.length; t3++) vals[textareas[t3].getAttribute("data-mex")] = textareas[t3].value;
+          S.moduleExercises[String(module)] = vals;
+          persist();
+          var msg = document.getElementById("mex-saved");
+          msg.textContent = module === 8 ? "Capstone saved to your profile — this counts toward your final certificate." : "Worksheet saved to your profile.";
+          msg.classList.remove("hidden");
+        });
+      }
+    }
+
+    /* ---------------- Quiz ---------------- */
+    function renderQuiz(root, module) {
+      var info = modInfo(module);
+      var quiz = quizOf(module);
+      if (!info.unlocked) {
+        if (info.paywalled) {
+          root.innerHTML =
+            '<div class="card card-pad-lg" style="max-width:672px;margin:0 auto">' +
+            '<h2 style="font-size:24px;font-weight:600">🔒 Module ' + module + " Quiz is part of the full course</h2>" +
+            '<p class="muted" style="margin-top:8px">Module 1 and its quiz are free to preview. Enroll once — $199, lifetime access — to open Module ' + module + " and the rest of the course.</p>" +
+            '<div style="margin-top:20px;display:grid;gap:10px;max-width:440px">' + enrollCtaHtml() + "</div>" +
+            '<p class="xs muted" style="margin-top:12px">' + CODE_NOTE + "</p>" +
+            '<div style="margin-top:16px;max-width:440px">' + codeFormHtml("quiz") + "</div></div>";
+          wireCodeForms(root);
+          return;
+        }
+        root.innerHTML =
+          '<div class="card card-pad-lg" style="max-width:672px;margin:0 auto">' +
+          '<h2 style="font-size:24px;font-weight:600">🔒 Module ' + module + " Quiz is locked</h2>" +
+          '<p class="muted" style="margin-top:8px">Pass the Module ' + (module - 1) + " quiz with 80% or higher to unlock Module " + module + ".</p>" +
+          '<button type="button" class="btn btn-navy" id="locked-go" style="margin-top:20px">Go to the Module ' + (module - 1) + " quiz</button></div>";
+        document.getElementById("locked-go").addEventListener("click", function () { setView({ kind: "quiz", module: module - 1 }); });
+        return;
+      }
+      if (!quizSession || quizSession.module !== module) {
+        quizSession = { module: module, answers: quiz.map(function () { return -1; }), result: null, warn: "" };
+      }
+      if (quizSession.result) { renderQuizResult(root, module, quiz); return; }
+
+      var qsHtml = quiz.map(function (q, i) {
+        var opts = q.options.map(function (opt, oi) {
+          var sel = quizSession.answers[i] === oi;
+          return '<label class="quiz-opt' + (sel ? " sel" : "") + '"><input type="radio" name="' + q.id + '" data-q="' + i + '" data-o="' + oi + '"' + (sel ? " checked" : "") + " /><span>" + esc(opt) + "</span></label>";
+        }).join("");
+        return '<fieldset class="quiz-q"><legend>' + (i + 1) + ". " + esc(q.question) + '</legend><div class="quiz-opts" role="radiogroup" aria-label="' + esc(q.question) + '">' + opts + "</div></fieldset>";
+      }).join("");
+
+      root.innerHTML =
+        '<div style="max-width:768px;margin:0 auto">' +
+        '<h2 style="font-size:24px;font-weight:600">Module ' + module + " Quiz — " + esc(moduleTitle(module)) + "</h2>" +
+        '<p class="muted" style="margin-top:4px">10 questions drawn from the five lessons of Module ' + module + ". Score 80% or higher to pass" +
+        (module < 8 && S.unlocked ? " and unlock Module " + (module + 1) : "") + ". Unlimited retakes — your best score is saved." +
+        (info.quizAttempts > 0 ? ' Current best: <strong>' + info.quizBestScore + "%</strong> across " + info.quizAttempts + " attempt" + (info.quizAttempts === 1 ? "" : "s") + "." : "") + "</p>" +
+        '<form id="quiz-form" style="margin-top:24px"><div class="stack">' + qsHtml + "</div>" +
+        (quizSession.warn ? '<p class="err-msg" role="alert" style="margin-top:16px">' + esc(quizSession.warn) + " Press “Submit quiz” again to submit anyway.</p>" : "") +
+        '<button type="submit" class="btn btn-navy" style="margin-top:20px">Submit quiz</button></form></div>';
+
+      var radios = root.querySelectorAll('input[type="radio"][data-q]');
+      for (var r = 0; r < radios.length; r++) {
+        radios[r].addEventListener("change", function () {
+          quizSession.answers[Number(this.getAttribute("data-q"))] = Number(this.getAttribute("data-o"));
+          var labels = this.closest(".quiz-opts").querySelectorAll(".quiz-opt");
+          for (var x = 0; x < labels.length; x++) labels[x].classList.remove("sel");
+          this.closest(".quiz-opt").classList.add("sel");
+        });
+      }
+      document.getElementById("quiz-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        var unanswered = quizSession.answers.filter(function (a) { return a === -1; }).length;
+        if (unanswered > 0 && !quizSession.warn) {
+          quizSession.warn = "You still have " + unanswered + " unanswered question" + (unanswered === 1 ? "" : "s") + " — unanswered questions count as incorrect.";
+          render(); // re-render keeps answers (quizSession persists)
+          return;
+        }
+        gradeQuiz(module, quiz);
+      });
+    }
+
+    function gradeQuiz(module, quiz) {
+      var answers = quizSession.answers;
+      var correct = 0;
+      var review = quiz.map(function (q, i) {
+        var sel = answers[i] == null ? -1 : answers[i];
+        var ok = sel === q.answer;
+        if (ok) correct++;
+        return { selected: sel, correctIndex: q.answer, isCorrect: ok };
+      });
+      var total = quiz.length;
+      var pct = Math.round((correct / total) * 100);
+      var passed = pct >= 80;
+      var rec = S.quizzes[String(module)] || { best: 0, attempts: 0, passed: false };
+      rec.attempts = (rec.attempts || 0) + 1;
+      rec.best = Math.max(rec.best || 0, pct);
+      rec.passed = rec.passed === true || passed;
+      S.quizzes[String(module)] = rec;
+      persist();
+      quizSession.result = { scorePercent: pct, correctCount: correct, totalCount: total, passed: passed, review: review, bestScore: rec.best };
+      render();
+      window.scrollTo({ top: 0 });
+    }
+
+    function renderQuizResult(root, module, quiz) {
+      var result = quizSession.result;
+      var info = modInfo(module);
+      var primaryBtn;
+      if (result.passed && info.allLessonsDone) {
+        primaryBtn = '<button type="button" class="btn btn-accent" data-res="cert">Get your Module ' + module + " certificate</button>";
+      } else if (result.passed && module < 8 && S.unlocked) {
+        primaryBtn = '<button type="button" class="btn btn-accent" data-res="next">Start Module ' + (module + 1) + "</button>";
+      } else if (result.passed && module < 8) {
+        primaryBtn = enrollCtaHtml();
+      } else {
+        primaryBtn = '<button type="button" class="btn btn-ghost" data-res="dash">Back to dashboard</button>';
+      }
+      var reviewHtml = quiz.map(function (q, i) {
+        var r = result.review[i];
+        return '<section class="card"><p style="font-weight:500">' + (i + 1) + ". " + esc(q.question) + " " +
+          (r.isCorrect ? '<span style="color:var(--success);font-weight:600">✓ Correct</span>' : '<span style="color:var(--danger);font-weight:600">✗ Incorrect</span>') + "</p>" +
+          '<p class="small" style="margin-top:8px">Your answer: <span style="font-weight:500">' + (r.selected === -1 ? "(no answer)" : esc(q.options[r.selected])) + "</span></p>" +
+          (!r.isCorrect ? '<p class="small" style="margin-top:4px">Correct answer: <span style="font-weight:500">' + esc(q.options[r.correctIndex]) + "</span></p>" : "") +
+          '<p class="small muted" style="margin-top:8px">' + esc(q.explanation) + "</p></section>";
+      }).join("");
+
+      root.innerHTML =
+        '<div style="max-width:768px;margin:0 auto">' +
+        '<section class="quiz-result ' + (result.passed ? "pass" : "fail") + '">' +
+        '<p class="score">' + result.scorePercent + "%</p>" +
+        '<p style="font-weight:600;margin-top:4px">' + (result.passed ? "You passed the Module " + module + " quiz!" : "Not yet — 80% is required to pass.") + "</p>" +
+        '<p class="small" style="margin-top:4px">' + result.correctCount + " of " + result.totalCount + " correct · Your best score: " + Math.max(result.bestScore, info.quizBestScore) + "%</p>" +
+        (result.passed && module < 8 && S.unlocked ? '<p class="small" style="margin-top:8px;font-weight:500">🔓 Module ' + (module + 1) + " — " + esc(moduleTitle(module + 1)) + " — is now unlocked.</p>"
+          : result.passed && module === 1 && !S.unlocked ? '<p class="small" style="margin-top:8px;font-weight:500">🔒 Module 2 — ' + esc(moduleTitle(2)) + " — is part of the full course. Enroll to keep going.</p>" : "") +
+        '<div style="margin-top:16px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px">' +
+        '<button type="button" class="btn btn-navy" data-res="retake">Retake quiz</button>' + primaryBtn +
+        "</div></section>" +
+        '<h3 style="font-size:20px;font-weight:600;margin-top:32px">Review your answers</h3>' +
+        '<div class="stack" style="margin-top:16px">' + reviewHtml + "</div></div>";
+
+      var btns = root.querySelectorAll("[data-res]");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var act = this.getAttribute("data-res");
+          if (act === "retake") { quizSession = { module: module, answers: quiz.map(function () { return -1; }), result: null, warn: "" }; render(); }
+          else if (act === "cert") setView({ kind: "certificate", scope: "M" + module });
+          else if (act === "next") setView({ kind: "lesson", id: (module + 1) + ".1" });
+          else setView({ kind: "dashboard" });
+        });
+      }
+    }
+
+    /* ---------------- Certificate ---------------- */
+    function ensureCertificate(scope) {
+      if (S.certificates[scope]) return S.certificates[scope];
+      var eligible = scope === "FINAL" ? finalEligible() : modInfo(Number(scope.slice(1))).complete;
+      if (!eligible) return null;
+      var prefix = scope === "FINAL" ? "COURSE" : scope;
+      var cert = { code: makeCode(prefix), issuedAt: new Date().toISOString() };
+      S.certificates[scope] = cert;
+      persist();
+      return cert;
+    }
+
+    function renderCertificate(root, scope) {
+      var isFinal = scope === "FINAL";
+      var module = isFinal ? 0 : Number(scope.slice(1));
+      var info = isFinal ? null : modInfo(module);
+      var cert = ensureCertificate(scope);
+      var eligible = isFinal ? finalEligible() : info.complete;
+
+      if (!eligible && !cert) {
+        var reqs;
+        if (isFinal) {
+          reqs =
+            '<li><span>' + (allModulesComplete() ? "✅" : "⬜") + "</span><span><strong>Complete all 8 modules</strong> — " + allModules().filter(function (m) { return m.complete; }).length + " of 8 complete (every module's lessons done and quiz passed).</span></li>" +
+            '<li><span>' + (capstoneSaved() ? "✅" : "⬜") + "</span><span><strong>Save the Module 8 capstone worksheet</strong> with all six fields completed (Lesson 8.5).</span></li>";
+        } else {
+          reqs =
+            '<li><span>' + (info.allLessonsDone ? "✅" : "⬜") + "</span><span><strong>Complete all 5 Module " + module + " lessons</strong> — " + info.lessonsDone + " of 5 done.</span></li>" +
+            '<li><span>' + (info.quizPassed ? "✅" : "⬜") + "</span><span><strong>Pass the Module " + module + " quiz with 80% or higher</strong>" + (info.quizAttempts ? " — best score so far: " + info.quizBestScore + "%." : " — not attempted yet.") + "</span></li>";
+        }
+        root.innerHTML =
+          '<div class="card card-pad-lg" style="max-width:672px;margin:0 auto">' +
+          '<h2 style="font-size:24px;font-weight:600">' + (isFinal ? "Final Certificate — Agentic AI Course" : "Module " + module + " Certificate") + "</h2>" +
+          '<p class="muted" style="margin-top:4px">' + (isFinal ? "Your final certificate unlocks when both requirements are met:" : "This certificate unlocks when both requirements are met:") + "</p>" +
+          '<ul class="req-list">' + reqs + "</ul>" +
+          '<div style="margin-top:24px;display:flex;flex-wrap:wrap;gap:12px">' +
+          '<button type="button" class="btn btn-navy" id="cert-go-curriculum">Go to curriculum</button>' +
+          (isFinal && !capstoneSaved() && modInfo(8).unlocked ? '<button type="button" class="btn btn-accent" id="cert-go-capstone">Open the capstone</button>' : "") +
+          "</div></div>";
+        document.getElementById("cert-go-curriculum").addEventListener("click", function () { setView({ kind: "curriculum" }); });
+        var cap = document.getElementById("cert-go-capstone");
+        if (cap) cap.addEventListener("click", function () { setView({ kind: "lesson", id: "8.5" }); });
+        return;
+      }
+      if (!cert) { root.innerHTML = '<p class="muted" style="text-align:center;padding:40px 0">Issuing your certificate…</p>'; return; }
+
+      var bestScore = isFinal
+        ? Math.min.apply(null, allModules().map(function (m) { return m.quizBestScore; }))
+        : info.quizBestScore;
+      var bodyText = isFinal
+        ? "has successfully completed the full Agentic AI Course — all eight modules (40 lessons), every module assessment passed at 80% or higher — and submitted a complete capstone agent design covering instructions, tools, memory, guardrails, evaluation, and a launch plan."
+        : "has successfully completed all five lessons of Module " + module + " — " + esc(moduleTitle(module)) + " — and passed the module assessment with a score of " + bestScore + "% (80% required).";
+
+      root.innerHTML =
+        '<div style="max-width:768px;margin:0 auto">' +
+        '<div class="no-print" style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px">' +
+        '<button type="button" class="btn btn-ghost" id="cert-all">All certificates</button></div>' +
+        '<div id="certificate-print">' +
+        '<p class="cert-kicker">CERTIFICATE OF COMPLETION</p>' +
+        '<p class="cert-course">Agentic AI Course</p>' +
+        '<p class="cert-sub">' + (isFinal ? "Full Course — All 8 Modules" : "Module " + module + " — " + esc(moduleTitle(module))) + "</p>" +
+        '<p style="margin-top:32px;color:#5B6472">This certifies that</p>' +
+        '<p class="cert-name">' + esc(S.name) + "</p>" +
+        '<p class="cert-body">' + bodyText + "</p>" +
+        '<div class="cert-meta">' +
+        '<div><p class="k">Date of completion</p><p class="v">' + fmtDate(cert.issuedAt) + "</p></div>" +
+        '<div><p class="k">Verification code</p><p class="v mono">' + esc(cert.code) + "</p></div>" +
+        '<div><p class="k">Credential</p><p class="v">Certificate of completion — not an accredited credential</p></div>' +
+        "</div>" +
+        '<div class="cert-seal" aria-hidden="true">🎓</div>' +
+        "</div>" +
+        '<p class="no-print small muted" style="margin-top:16px;text-align:center">Keep your verification code — it uniquely identifies this certificate.</p>' +
+        "</div>";
+
+      document.getElementById("cert-all").addEventListener("click", function () { setView({ kind: "certificates" }); });
+    }
+
+    /* ---------------- Boot ---------------- */
+    fetch("assets/asset-01.json")
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (data) { COURSE = data; render(); })
+      .catch(function () {
+        app.innerHTML = '<div class="loading"><div style="text-align:center"><p style="color:var(--text);font-weight:500">Could not load the course content.</p><p class="small muted" style="margin-top:6px">Check your connection and reload the page.</p></div></div>';
+      });
+    </script>
+  </body>
+</html>
